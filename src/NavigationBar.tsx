@@ -76,6 +76,10 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
           <Link to="/form" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white m-2 transition-colors duration-200">
             Contact Form
           </Link>
+          
+          <a href="/resume/LooPingWee_Resume_Dec24.pdf" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white m-2 transition-colors duration-200" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
 
         </div>
       </div>
