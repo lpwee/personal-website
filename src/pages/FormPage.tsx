@@ -1,26 +1,5 @@
 import React, { useState } from 'react';
-
-type EventType = 'MensOpen' | 'WomensOpen' | 'VeteransOpen' | 'YouthOpen' | 'DuosOpen' | 'TeamsOpen' | 'RelayOpen';
-
-interface FormData {
-  termsAccepted: boolean;
-  dataUsageAccepted: boolean;
-  eventType: EventType | null;
-  // Singles data
-  participantName?: string;
-  bloodType?: string;
-  emergencyContact?: string;
-  // Team data
-  memberCount?: number;
-  teamMembers?: {
-    name: string;
-    bloodType: string;
-    emergencyContact: string;
-  }[];
-  // Payment data
-  discountCode?: string;
-  finalPrice?: number;
-}
+import { EventType, FormData } from '../types';
 
 const FormPage: React.FC = () => {
   const [step, setStep] = useState(1);
