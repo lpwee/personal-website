@@ -12,7 +12,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                      bg-white/10 backdrop-blur-lg 
                      border border-white/20
                      shadow-xl
-                     transition-all duration-300">
+                     transition-all duration-300 min-w-96">
         {/* Socials */}
         <div className="flex items-center mx-3 lg:mx-8 lg:gap-4 lg:w-32">
           <a 
@@ -22,7 +22,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
             aria-label="LinkedIn Profile"
           >
             <img 
-              src="/src/assets/linkedin-icon.svg"
+              src="/icons/linkedin-icon.svg"
               alt="LinkedIn"
               className="h-8 w-8 mr-2 [color-scheme:normal]"
             />
@@ -34,7 +34,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
             aria-label="Github Profile"
           >
             <img 
-              src="/src/assets/github-icon.svg"
+              src="/icons/github-icon.svg"
               alt="Github"
               className="h-8 w-8 mr-2"
             />

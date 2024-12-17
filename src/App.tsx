@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import NavigationBar from './NavigationBar';
+import NavigationBar from './components/layout/NavigationBar';
 import FormPage from './pages/FormPage';
-import './App.css';
 import HomePage from './pages/HomePage';
+import './styles/App.css';
+
 
 function App() {
   return (
