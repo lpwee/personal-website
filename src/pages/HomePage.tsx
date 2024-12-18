@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
   return (
@@ -15,9 +14,9 @@ const HomePage: React.FC = () => {
           <p className="text-white/90 mb-4">
             I'm an aspiring software engineer.
           </p>
-          <Link to="/resume" className="inline-block px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-white transition-all duration-300">
+          <a href="/resume/LooPingWee_Resume_Dec24.pdf" className="inline-block px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-white transition-all duration-300" target="_blank" rel="noopener noreferrer">
             Resume
-          </Link>
+          </a>
         </div>
 
         <div className="rounded-lg border border-white/20 p-6 shadow-xl bg-white/10 min-w-80 my-5">
