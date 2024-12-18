@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
           <p className="text-white/90 mb-4">
             I'm an aspiring software engineer.
           </p>
-          <a href="/resume/LooPingWee_Resume_Dec24.pdf" className="inline-block px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-white transition-all duration-300" target="_blank" rel="noopener noreferrer">
+          <a href="/resume.html" className="inline-block px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-white transition-all duration-300" target="_blank" rel="noopener noreferrer">
             Resume
           </a>
         </div>
