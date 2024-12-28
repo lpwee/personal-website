@@ -12,8 +12,10 @@ const HomePage: React.FC = () => {
               className="h-64 w-64 rounded-full"
             ></img>
           </div>
-          <h2 className="mb-4 text-3xl font-bold text-white">👋🏻 Hi! I am Ping Wee.</h2>
+          <h2 className="text-3xl font-bold text-white">👋🏻 Hi! I am Ping Wee.</h2>
           <p className="mb-4 text-white/90">I'm an aspiring software engineer.</p>
+          <p className="text-white/90">Currently studying Computer Science in Nanyang Technological University.</p>
+          <p className="mb-4 text-white/90">In my free time, I am studying cloud technologies.</p>
           <a
             href="/resume.html"
             className="inline-block rounded-lg bg-white/20 px-4 py-2 text-white transition-all duration-300 hover:bg-white/30"
