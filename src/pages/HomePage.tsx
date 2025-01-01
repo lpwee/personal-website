@@ -7,6 +7,7 @@ interface Repository {
   html_url: string;
   language: string | null;
   stargazers_count: number;
+  forks_count: number;
 }
 
 
@@ -221,7 +222,7 @@ const HomePage: React.FC = () => {
       </div>
 
 
-      {/* Generated Code  for Github Projects*/}
+      {/* Generated Code for Github Projects*/}
       <div className="my-5 min-w-80 rounded-lg border border-white/20 bg-white/10 p-6 shadow-xl">
         <h2 className="mb-4 text-2xl font-bold text-white">Recent GitHub Projects</h2>
         {loading && <p className="text-white">Loading repositories...</p>}
@@ -229,26 +230,24 @@ const HomePage: React.FC = () => {
         {!loading && !error && (
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {repositories.map((repo) => (
-              <a
+              <div
                 key={repo.id}
-                href={repo.html_url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="rounded-lg border border-white/20 bg-white/10 p-4 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/40"
               >
-                <h3 className="mb-2 text-lg font-semibold text-white">{repo.name}</h3>
-                {repo.description && (
-                  <p className="mb-3 text-sm text-white/80">{repo.description}</p>
-                )}
-                <div className="flex items-center gap-4">
-                  {repo.language && (
-                    <span className="text-sm text-white/60">
-                      <span className="mr-1">•</span>
-                      {repo.language}
-                    </span>
-                  )}
-                  {repo.stargazers_count > 0 && (
-                    <span className="flex items-center text-sm text-white/60">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <svg data-v-1b4c55a8="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path data-v-1b4c55a8="" d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+                    <a
+                      href={repo.html_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-semibold text-white hover:underline"
+                    >
+                      {repo.name}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-white/60">
+                    <span className="flex items-center">
                       <svg
                         className="mr-1 h-4 w-4"
                         fill="none"
@@ -264,9 +263,26 @@ const HomePage: React.FC = () => {
                       </svg>
                       {repo.stargazers_count}
                     </span>
-                  )}
+                    <span className="flex items-center">
+                      <svg className="mr-1 h-4 w-4" viewBox="0 0 16 16" fill="currentColor">
+                        <path fillRule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+                      </svg>
+                      {repo.forks_count}
+                    </span>
+                  </div>
                 </div>
-              </a>
+                <p className="mb-3 text-sm text-white/80 text-left">
+                  {repo.description || "No description available"}
+                </p>
+                {repo.language && (
+                  <div className="flex items-center">
+                    <span className="text-sm text-white/60">
+                      <span className="mr-1">•</span>
+                      {repo.language}
+                    </span>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         )}
