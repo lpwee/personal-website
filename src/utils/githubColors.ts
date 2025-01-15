@@ -1,0 +1,28 @@
+// GitHub language colors from https://github.com/ozh/github-colors
+export const githubColors: { [key: string]: string } = {
+  TypeScript: '#3178C6',
+  JavaScript: '#F7DF1E',
+  Python: '#3776AB',
+  Java: '#B07219',
+  'C++': '#00599C',
+  HTML: '#E34F26',
+  CSS: '#1572B6',
+  R: '#276DC3',
+  Go: '#00ADD8',
+  Ruby: '#CC342D',
+  PHP: '#4F5D95',
+  Swift: '#F05138',
+  Kotlin: '#A97BFF',
+  Rust: '#DEA584',
+  Dart: '#00B4AB',
+  Vue: '#41B883',
+  Shell: '#89E051',
+  PowerShell: '#012456',
+  C: '#555555',
+  'C#': '#178600',
+  Scala: '#DC322F',
+  Jupyter: '#DA5B0B',
+  Dockerfile: '#384d54',
+  SCSS: '#C6538C',
+  Assembly: '#6E4C13'
+};

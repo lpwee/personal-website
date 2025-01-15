@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { githubColors } from '../utils/githubColors';
 
 interface Repository {
   id: number;
@@ -10,9 +11,7 @@ interface Repository {
   forks_count: number;
 }
 
-
 const HomePage: React.FC = () => {
-
   // Generated Code
   const [repositories, setRepositories] = useState<Repository[]>([]);
   const [loading, setLoading] = useState(true);
@@ -36,7 +35,6 @@ const HomePage: React.FC = () => {
 
     fetchRepositories();
   }, []);
-
   // End Generated Code
 
   return (
@@ -221,13 +219,10 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-
       {/* Generated Code for Github Projects*/}
-      <div className="my-5 min-w-80 rounded-lg border border-white/20 bg-white/10 p-6 shadow-xl">
-        <h2 className="mb-4 text-2xl font-bold text-white">Recent GitHub Projects</h2>
-        {loading && <p className="text-white">Loading repositories...</p>}
-        {error && <p className="text-red-500">Error: {error}</p>}
-        {!loading && !error && (
+      {!loading && !error && (
+        <div className="my-5 min-w-80 rounded-lg border border-white/20 bg-white/10 p-6 shadow-xl">
+          <h2 className="mb-4 text-2xl font-bold text-white">Recent GitHub Projects</h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {repositories.map((repo) => (
               <div
@@ -271,13 +266,18 @@ const HomePage: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <p className="mb-3 text-sm text-white/80 text-left">
+                <p className="mb-4 text-sm text-white/80 text-left">
                   {repo.description || "No description available"}
                 </p>
                 {repo.language && (
-                  <div className="flex items-center">
+                  <div className="flex flex-row mt-auto pt-2 border-white/10">
                     <span className="text-sm text-white/60">
-                      <span className="mr-1">•</span>
+                      <span 
+                        className="mr-1 inline-block h-3 w-3 rounded-full" 
+                        style={{ 
+                          backgroundColor: repo.language ? githubColors[repo.language] || '#fff' : '#fff'
+                        }}
+                      />
                       {repo.language}
                     </span>
                   </div>
@@ -285,10 +285,9 @@ const HomePage: React.FC = () => {
               </div>
             ))}
           </div>
-        )}
-      </div>
+        </div>
+      )}
       {/* End Generated Code */}
-
     </main>
   );
 };
