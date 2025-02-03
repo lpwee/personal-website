@@ -84,12 +84,8 @@ const HomePage: React.FC = () => {
                   <p className="truncate text-white">TypeScript</p>
                 </div>
                 <div className="flex h-12 items-center justify-start gap-3 rounded-lg border border-white/20 bg-slate-700 px-4 py-2 shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-white/40 hover:shadow-2xl">
-                  <img src="/icons/c-plusplus.svg" alt="C++" className="h-6 w-6 flex-shrink-0" />
-                  <p className="truncate text-white">C++</p>
-                </div>
-                <div className="flex h-12 items-center justify-start gap-3 rounded-lg border border-white/20 bg-slate-700 px-4 py-2 shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-white/40 hover:shadow-2xl">
-                  <img src="/icons/r-lang.svg" alt="R" className="h-6 w-6 flex-shrink-0" />
-                  <p className="truncate text-white">R</p>
+                  <img src="/icons/c-lang.svg" alt="C++" className="h-6 w-6 flex-shrink-0" />
+                  <p className="truncate text-white">C</p>
                 </div>
               </div>
             </div>
@@ -146,10 +142,6 @@ const HomePage: React.FC = () => {
                     className="h-6 w-6 flex-shrink-0"
                   />
                   <p className="truncate text-white">PostgreSQL</p>
-                </div>
-                <div className="flex h-12 items-center justify-start gap-3 rounded-lg border border-white/20 bg-slate-700 px-4 py-2 shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-white/40 hover:shadow-2xl">
-                  <img src="/icons/firebase.svg" alt="Firebase" className="h-6 w-6 flex-shrink-0" />
-                  <p className="truncate text-white">Firebase</p>
                 </div>
               </div>
             </div>
