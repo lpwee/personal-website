@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface NavigationBarProps {
   // Add props if needed in the future
@@ -52,7 +52,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
         </div>
 
         {/* Navigation Links */}
-        {/* <div className="flex items-center">
+        <div className="flex items-center">
           <div className="flex">
             <Link to="/" className="text-white hover:text-white/80 mx-2 transition-colors duration-200">
               Home
@@ -60,8 +60,11 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
             <Link to="/form" className="text-white hover:text-white/80 mx-2 transition-colors duration-200">
               Form
             </Link>
+            <Link to="/nvm-timing" className="text-white hover:text-white/80 mx-2 transition-colors duration-200">
+              Timing App
+            </Link>
           </div>
-        </div> */}
+        </div>
       </nav>
 
       {/* Light reflection effect */}
